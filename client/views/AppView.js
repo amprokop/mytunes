@@ -11,10 +11,12 @@ var AppView = Backbone.View.extend({
 
     this.songQueueView.collection.on('add', function(model){
        this.songQueueView.render();
-       //check to see if audio is paused
-       //if so, call songQueue.playFirst
-       
     }, this);
+
+    this.songQueueView.collection.on('remove', function(model){
+       this.songQueueView.render();
+    }, this);
+    
   },
 
   render: function(){
