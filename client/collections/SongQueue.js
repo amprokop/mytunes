@@ -5,9 +5,11 @@ var SongQueue = Songs.extend({
 });
 
 SongQueue.prototype.playFirst = function(){
-    return (this.length === 1);
-};
-
-SongQueue.prototype.playNext = function(){
-  return (this.length >= 1);
+    if(this.length === 1){
+      return true;
+    } else if(this.length === 0){
+      return false;
+    } else{
+      return (this.length >=1);
+    }
 };
