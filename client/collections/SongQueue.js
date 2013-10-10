@@ -2,7 +2,6 @@
 var SongQueue = Songs.extend({
 
   initialize: function(){
-  
   },
   //write enqueue and dequeue functions
 
